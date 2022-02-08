@@ -1,0 +1,2 @@
+name: QEMU_MIPSEL_DEMO_OVERLAY
+desc: Filesystem for testing mipsel software inside of qemu
