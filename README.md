@@ -6,7 +6,7 @@ Main purposes:
 
 ## Build
 ### Requirements
-- GCC 7.4+
+- GCC 7.4 - 9.x
 - make
 - cpio
 - rsync
