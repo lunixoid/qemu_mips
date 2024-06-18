@@ -1,0 +1,30 @@
+#!/bin/sh
+#
+# Start RAUC....
+#
+
+case "$1" in
+  start)
+    echo "Starting RAUC..."
+    /usr/bin/rauc service &
+    cmdline=$(cat /proc/cmdline)
+    case $cmdline in
+      *rauc.slot* )
+         /usr/bin/rauc status mark-good
+         ;;
+    esac 
+    ;;
+  stop)
+    echo -n "Stopping RAUC..."
+    /usr/bin/killall -q rauc
+    ;;
+  restart|reload)
+    "$0" stop
+    "$0" start
+    ;;
+  *)
+    echo $"Usage: $0 {start|stop|restart}"
+    exit 1
+esac
+
+exit $?
