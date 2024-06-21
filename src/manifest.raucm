@@ -1,0 +1,9 @@
+[update]
+compatible=qemu_mips
+version=0.0.0
+
+[bundle]
+format=verity
+
+[image.rootfs]
+filename=rootfs.ext4
