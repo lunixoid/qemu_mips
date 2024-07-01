@@ -45,5 +45,6 @@ test: qemu_image
 
 clean:
 	rm -rf $(BUILD_DIR)
+	rm -rf $(RAUC_ROOTFS)/key.pem $(RAUC_ROOTFS)/cert.pem
 distclean: clean
 	$(MAKE) -C $(BUILDROOT_PATH) distclean
